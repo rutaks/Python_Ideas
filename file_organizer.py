@@ -1,3 +1,7 @@
+#A PYTHON THAT MONITORS A SPECIFIED DIRECTORY
+#AND ALERTS WHEN AN EVENT HAPPENED IN YOUR FILES IN THE DIRECTORY
+#ALSO ARRANGES YOUR FILES ACCORDING TO THEIR FILE TYPE BY PUTTING THEM IN THEIR RESPECTIVE FOLDERS UPON CREATION
+
 import time
 from watchdog.observers import Observer
 from watchdog.events import PatternMatchingEventHandler
@@ -63,7 +67,7 @@ def on_created(event):
 
 
 def on_deleted(event):
-    print(f"what the f**k! Someone deleted {event.src_path}!")
+    print(f"what the!!! Someone deleted {event.src_path}!")
 
 
 def on_modified(event):
